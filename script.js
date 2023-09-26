@@ -84,7 +84,7 @@ shopButtons.forEach(function (button) {
   
       // Create and append the image to the body
       var imgElement = document.createElement("img");
-      imgElement.src = "https://tenor.com/en-GB/view/dog-gif-22089558";
+      imgElement.src = "dog.gif";
  
       imgElement.style =
         "width: 200px; height: 200px; position: fixed; top: -200px; left: 0; transition: top 0.5s ease-in-out; z-index: 9999;";
