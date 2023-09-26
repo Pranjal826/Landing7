@@ -84,7 +84,7 @@ shopButtons.forEach(function (button) {
   
       // Create and append the image to the body
       var imageElement = document.createElement("img");
-      imageElement.src = "greenscreen-funny-green-screen-unscreen.gif";
+      imageElement.src = "ASw6X8V.mp4";
       imageElement.style =
         "width: 200px; height: 200px; position: fixed; top: -200px; left: 0; transition: top 0.5s ease-in-out; z-index: 9999;";
       document.body.appendChild(imageElement);
