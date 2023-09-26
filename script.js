@@ -83,17 +83,17 @@ shopButtons.forEach(function (button) {
       }
   
       // Create and append the image to the body
-      var videoElement = document.createElement("video");
-      videoElement.src = "Asw6X8V.mp4";
-      videoElement.autoplay = true; 
-      videoElement.style =
+      var imgElement = document.createElement("img");
+      imgElement.src = "https://tenor.com/en-GB/view/dog-gif-22089558";
+ 
+      imgElement.style =
         "width: 200px; height: 200px; position: fixed; top: -200px; left: 0; transition: top 0.5s ease-in-out; z-index: 9999;";
-      document.body.appendChild(videoElement);
+      document.body.appendChild(imgElement);
       
   
       // Triggering the image animation and popup
       setTimeout(function () {
-        videoElement.style.top = "0";
+        imgElement.style.top = "0";
         Swal.fire({
           title: actionText,
           html: "",
@@ -109,9 +109,9 @@ shopButtons.forEach(function (button) {
           },
           willClose: () => {
             document.body.style.overflow = "auto"; // Restore body scroll
-            videoElement.style.top = "-200px";
+            imgElement.style.top = "-200px";
             setTimeout(function () {
-              document.body.removeChild(videoElement);
+              document.body.removeChild(imgElement);
             }, 500); // Wait for the animation to finish before removing the image
           },
         });
