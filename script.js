@@ -83,15 +83,16 @@ shopButtons.forEach(function (button) {
       }
   
       // Create and append the image to the body
-      var imageElement = document.createElement("img");
-      imageElement.src = "ASw6X8V.mp4";
-      imageElement.style =
+         var videoElement = document.createElement("video");
+      videoElement.src = "Asw6X8V.mp4";
+      videoElement.autoplay = true; 
+      videoElement.style =
         "width: 200px; height: 200px; position: fixed; top: -200px; left: 0; transition: top 0.5s ease-in-out; z-index: 9999;";
-      document.body.appendChild(imageElement);
+      document.body.appendChild(videoElement);
   
       // Triggering the image animation and popup
       setTimeout(function () {
-        imageElement.style.top = "0";
+        videoElement.style.top = "0";
         Swal.fire({
           title: actionText,
           html: "",
@@ -107,9 +108,9 @@ shopButtons.forEach(function (button) {
           },
           willClose: () => {
             document.body.style.overflow = "auto"; // Restore body scroll
-            imageElement.style.top = "-200px";
+            videoElement.style.top = "-200px";
             setTimeout(function () {
-              document.body.removeChild(imageElement);
+              document.body.removeChild(videoElement);
             }, 500); // Wait for the animation to finish before removing the image
           },
         });
